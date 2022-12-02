@@ -4,10 +4,10 @@ Summary:	Octave Small Toolbox for Kriging
 Name:		octave-%{octpkg}
 Version:	2.7.0
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 
 BuildRequires:	octave-devel >= 3.2.4
 
@@ -26,8 +26,6 @@ experiments. Even though it is, currently, mostly geared towards the Design
 and Analysis of Computer Experiments (DACE), the STK can be useful for other
 applications areas (such as Geostatistics, Machine Learning, Non-parametric
 Regression, etc.).
-
-This package is part of external Octave-Forge collection.
 
 %files
 %license COPYING
