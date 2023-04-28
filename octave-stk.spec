@@ -1,15 +1,16 @@
-%define octpkg stk
+%global octpkg stk
 
-Summary:	Octave Small Toolbox for Kriging
-Name:		octave-%{octpkg}
-Version:	2.7.0
+Summary:	The STK is a (not so) Small Toolbox for Kriging for Octave
+Name:		octave-stk
+Version:	2.8.0
 Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
+#Url:		https://packages.octave.org/stk/
+Url:		https://github.com/stk-kriging/stk
+Source0:	https://github.com/stk-kriging/stk/releases/download/%{version}/stk-%{version}-octpkg.tar.gz
 
-BuildRequires:	octave-devel >= 3.2.4
+BuildRequires:  octave-devel >= 4.0.1
 
 Requires:	octave(api) = %{octave_api}
 
@@ -30,18 +31,16 @@ Regression, etc.).
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
+#{_metainfodir}/*.metainfo.xml
 
 #---------------------------------------------------------------------------
 
 %prep
 %autosetup -p1 -n %{octpkg}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %set_build_flags
