@@ -3,7 +3,7 @@
 Summary:	The STK is a (not so) Small Toolbox for Kriging for Octave
 Name:		octave-stk
 Version:	2.8.1
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
 #Url:		https://packages.octave.org/stk/
